@@ -79,18 +79,26 @@ const ViewLaunch = ({ launch }, ref) => {
               <p style={{ marginRight: "50px" }}>Nationality </p>
               <p>{launch?.rocket?.second_stage?.payloads[0]?.nationality}</p>
             </Grid>
+            <Divider />
+
             <Grid item sx={{ display: "flex" }}>
               <p style={{ marginRight: "50px" }}>Launch Date </p>
               <p>{launch?.launch_date_local}</p>
             </Grid>
+            <Divider />
+
             <Grid item sx={{ display: "flex" }}>
               <p style={{ marginRight: "50px" }}>Payload Type </p>
               <p>{launch?.rocket?.second_stage?.payloads[0]?.payload_type}</p>
             </Grid>
+            <Divider />
+
             <Grid item sx={{ display: "flex" }}>
-              <p style={{ marginRight: "50px" }}>Orbit </p>
+              <p style={{ marginRight: "100px" }}>Orbit </p>
               <p>{launch?.rocket?.second_stage?.payloads[0]?.orbit}</p>
             </Grid>
+            <Divider />
+
             <Grid item sx={{ display: "flex" }}>
               <p style={{ marginRight: "50px" }}>Launch Site </p>
               <p>{launch?.launch_site?.site_name}</p>
