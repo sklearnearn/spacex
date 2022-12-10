@@ -17,12 +17,12 @@ const SpacexApp = () => {
 
       <Routes>
         <Route path="" element={<Navigate to="/all" />} />
-        <Route path="/all" element={<AllLaunches />} />
-        <Route path="/upcoming" element={<UpcomingLaunches />} />
-        <Route path="/successful" element={<SuccessfulLaunches />} />
-        <Route path="/failed" element={<FailedLaunches />} />
-        <Route path="/past" element={<PastLaunches />} />
-        <Route path="/latest" element={<LastestLaunches />} />
+        <Route path="all" element={<AllLaunches />} />
+        <Route path="upcoming" element={<UpcomingLaunches />} />
+        <Route path="successful" element={<SuccessfulLaunches />} />
+        <Route path="failed" element={<FailedLaunches />} />
+        <Route path="past" element={<PastLaunches />} />
+        <Route path="latest" element={<LastestLaunches />} />
       </Routes>
     </>
   );
