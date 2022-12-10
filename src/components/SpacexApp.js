@@ -8,12 +8,14 @@ import FailedLaunches from "./FailedLaunches";
 import UpcomingLaunches from "./UpcomingLaunches";
 import PastLaunches from "./PastLaunches";
 import LastestLaunches from "./LatestLaunches";
+import { Typography } from "@mui/material";
 
 const SpacexApp = () => {
   return (
     <>
       <Navbar />
       <ButtonGroup />
+      <Typography textAlign="center">Click on record to see details</Typography>
 
       <Routes>
         <Route path="" element={<Navigate to="/all" />} />
