@@ -2,8 +2,10 @@ import React, { useRef, useState } from "react";
 import Chip from "@mui/material/Chip";
 import MUIDataTable from "mui-datatables";
 import ViewLaunch from "./ViewLaunch";
+import CircularIndeterminate from "./Progress";
+import { Container } from "@mui/material";
 
-const Table = ({ data }) => {
+const Table = ({ data, loading }) => {
   const [dataInRow, setDataInRow] = useState({});
   const launchRef = useRef(null);
 
@@ -71,7 +73,21 @@ const Table = ({ data }) => {
 
   return (
     <>
-      <MUIDataTable columns={columns} data={data} options={options} />
+      {loading ? (
+        <Container
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "70vh",
+          }}
+        >
+          <CircularIndeterminate />
+        </Container>
+      ) : (
+        <MUIDataTable columns={columns} data={data} options={options} />
+      )}
       <ViewLaunch launch={dataInRow} ref={launchRef} />
     </>
   );

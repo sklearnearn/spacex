@@ -4,10 +4,12 @@ import Table from "./Table";
 
 const AllLaunches = () => {
   const [data, setData] = useState();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     SpaceServices.getAllLaunches().then((res) => {
       setData(res.data);
+      setLoading(false);
     });
   }, []);
 
@@ -15,7 +17,7 @@ const AllLaunches = () => {
 
   return (
     <>
-      <Table data={data} />
+      <Table data={data} loading={loading} />
     </>
   );
 };
